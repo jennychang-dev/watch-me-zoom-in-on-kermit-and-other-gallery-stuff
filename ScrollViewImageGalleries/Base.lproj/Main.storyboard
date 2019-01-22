@@ -74,6 +74,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QuM-aC-P1r">
+                                <rect key="frame" x="168" y="622" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90F-0f-6iu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
@@ -122,8 +127,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="90F-0f-6iu" firstAttribute="top" secondItem="Ka2-9c-5cd" secondAttribute="top" id="6L3-nq-plj"/>
+                            <constraint firstItem="QuM-aC-P1r" firstAttribute="centerX" secondItem="iI2-eg-OLd" secondAttribute="centerX" id="MAa-wh-iCC"/>
                             <constraint firstItem="Ka2-9c-5cd" firstAttribute="bottom" secondItem="90F-0f-6iu" secondAttribute="bottom" id="aY0-PW-VMA"/>
                             <constraint firstItem="90F-0f-6iu" firstAttribute="leading" secondItem="Ka2-9c-5cd" secondAttribute="leading" id="eY1-LA-bYp"/>
+                            <constraint firstItem="Ka2-9c-5cd" firstAttribute="bottom" secondItem="QuM-aC-P1r" secondAttribute="bottom" constant="8" id="tTl-1I-c1i"/>
                             <constraint firstItem="Ka2-9c-5cd" firstAttribute="trailing" secondItem="90F-0f-6iu" secondAttribute="trailing" id="xAV-PB-M2v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ka2-9c-5cd"/>
@@ -131,6 +138,7 @@
                     <navigationItem key="navigationItem" id="oBy-vw-MGR"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="currentPage" destination="QuM-aC-P1r" id="tN7-Ig-UdH"/>
                         <outlet property="lighthouseDay" destination="eEn-yD-3Ng" id="aY8-yF-dTV"/>
                         <outlet property="lighthouseField" destination="KJM-B6-WqS" id="LEe-cG-2hX"/>
                         <outlet property="ligthouseNight" destination="xfc-Aj-zEW" id="rqo-9x-i4N"/>

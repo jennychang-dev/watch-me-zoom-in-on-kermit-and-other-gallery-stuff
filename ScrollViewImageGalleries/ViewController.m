@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *lighthouseField;
 @property (weak, nonatomic) IBOutlet UIImageView *lighthouseDay;
 @property (weak, nonatomic) IBOutlet UIImageView *ligthouseNight;
+@property (weak, nonatomic) IBOutlet UIPageControl *currentPage;
 
 
 @end
@@ -24,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.scrollView.delegate = self;
+    self.currentPage.numberOfPages = 3;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -52,6 +54,12 @@
     [self performSegueWithIdentifier:@"segueMe" sender:sender.view];
 }
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSInteger page = round(scrollView.contentOffset.x/375);
+    self.currentPage.currentPage = page;
+    NSLog(@"my pages %lu",page);
+}
 
 
 @end
