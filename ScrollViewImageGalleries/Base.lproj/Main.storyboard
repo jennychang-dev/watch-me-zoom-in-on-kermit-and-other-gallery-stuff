@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OYk-mp-EoX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mmx-kl-Rh0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -52,6 +52,21 @@
             <point key="canvasLocation" x="8" y="-1238"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="jEg-Kc-m4l">
+            <objects>
+                <viewController id="EtT-Gy-rtU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M5u-q9-f7v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="oUa-bE-58d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7GL-S1-bMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-991" y="3"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tbg-NI-21O">
             <objects>
                 <viewController id="pyw-hJ-JIR" customClass="ViewController" sceneMemberID="viewController">
@@ -60,18 +75,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90F-0f-6iu">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse" translatesAutoresizingMaskIntoConstraints="NO" id="eEn-yD-3Ng">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse" translatesAutoresizingMaskIntoConstraints="NO" id="eEn-yD-3Ng">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="gce-J6-3PK" appends="YES" id="tb3-5R-K3a"/>
+                                        </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="KJM-B6-WqS">
-                                        <rect key="frame" x="375" y="0.0" width="375" height="647"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="KJM-B6-WqS">
+                                        <rect key="frame" x="375" y="0.0" width="375" height="603"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="EBr-wV-VDk" appends="YES" id="Das-EF-inB"/>
+                                        </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-night" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-Aj-zEW">
-                                        <rect key="frame" x="750" y="0.0" width="375" height="647"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-night" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-Aj-zEW">
+                                        <rect key="frame" x="750" y="0.0" width="375" height="603"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="dE7-25-8qx" appends="YES" id="8c0-Og-veB"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="KJM-B6-WqS" firstAttribute="top" secondItem="90F-0f-6iu" secondAttribute="top" id="6vm-b6-8b5"/>
                                     <constraint firstItem="KJM-B6-WqS" firstAttribute="leading" secondItem="eEn-yD-3Ng" secondAttribute="trailing" id="ADl-E8-EcA"/>
@@ -100,16 +128,96 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ka2-9c-5cd"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oBy-vw-MGR"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="lighthouseDay" destination="eEn-yD-3Ng" id="aY8-yF-dTV"/>
                         <outlet property="lighthouseField" destination="KJM-B6-WqS" id="LEe-cG-2hX"/>
                         <outlet property="ligthouseNight" destination="xfc-Aj-zEW" id="rqo-9x-i4N"/>
                         <outlet property="scrollView" destination="90F-0f-6iu" id="S5V-h6-T8H"/>
+                        <segue destination="aHS-W6-tSS" kind="show" identifier="segueMe" id="tCA-bx-GQF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0a-8o-pNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gce-J6-3PK">
+                    <connections>
+                        <action selector="imageTapped:" destination="pyw-hJ-JIR" id="5Qb-Kq-P7W"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="EBr-wV-VDk">
+                    <connections>
+                        <action selector="image2:" destination="pyw-hJ-JIR" id="fVn-Xb-bAp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dE7-25-8qx">
+                    <connections>
+                        <action selector="image3tapped:" destination="pyw-hJ-JIR" id="gca-8Q-rD2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-46.399999999999999" y="-565.36731634182911"/>
+            <point key="canvasLocation" x="836" y="-341.37931034482762"/>
+        </scene>
+        <!--Detailed View Controller-->
+        <scene sceneID="HTl-nn-Itw">
+            <objects>
+                <viewController id="aHS-W6-tSS" customClass="DetailedViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qq8-pK-kjz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3f-gp-Dsg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRY-3t-YAh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="aRY-3t-YAh" firstAttribute="leading" secondItem="P3f-gp-Dsg" secondAttribute="leading" id="FfQ-pj-9lh"/>
+                                    <constraint firstAttribute="trailing" secondItem="aRY-3t-YAh" secondAttribute="trailing" id="L80-Mk-3qv"/>
+                                    <constraint firstItem="aRY-3t-YAh" firstAttribute="centerX" secondItem="P3f-gp-Dsg" secondAttribute="centerX" id="NfF-ZW-q6O"/>
+                                    <constraint firstItem="aRY-3t-YAh" firstAttribute="centerY" secondItem="P3f-gp-Dsg" secondAttribute="centerY" id="Xk8-Bz-hfk"/>
+                                    <constraint firstAttribute="bottom" secondItem="aRY-3t-YAh" secondAttribute="bottom" id="nK9-vl-sFp"/>
+                                    <constraint firstItem="aRY-3t-YAh" firstAttribute="top" secondItem="P3f-gp-Dsg" secondAttribute="top" id="pPX-Yv-wbN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P3f-gp-Dsg" firstAttribute="top" secondItem="zzY-qO-qUt" secondAttribute="top" id="K9h-OG-Sv8"/>
+                            <constraint firstItem="zzY-qO-qUt" firstAttribute="bottom" secondItem="P3f-gp-Dsg" secondAttribute="bottom" id="bq0-eB-Kax"/>
+                            <constraint firstItem="P3f-gp-Dsg" firstAttribute="leading" secondItem="zzY-qO-qUt" secondAttribute="leading" id="qVR-Rg-D7R"/>
+                            <constraint firstItem="zzY-qO-qUt" firstAttribute="trailing" secondItem="P3f-gp-Dsg" secondAttribute="trailing" id="t1J-9A-LcB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zzY-qO-qUt"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailedImage" destination="aRY-3t-YAh" id="qaK-RA-Q1D"/>
+                        <outlet property="scrollView" destination="P3f-gp-Dsg" id="g8u-x2-8g9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jzn-hy-K3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640.8" y="-558.17091454272872"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HU0-sa-kIK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mmx-kl-Rh0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CuH-fY-y5H">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pyw-hJ-JIR" kind="relationship" relationship="rootViewController" id="SmT-Oj-2fM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uU9-5e-82J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="-341.37931034482762"/>
         </scene>
     </scenes>
     <resources>
